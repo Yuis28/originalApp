@@ -31,10 +31,89 @@
                     <view key="view" contentMode="scaleToFill" id="xJ5-Do-5hg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-Hp-MQq">
+                                <rect key="frame" x="104" y="418" width="206.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-P1-kVt">
+                                <rect key="frame" x="68" y="342" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IQW-bX-Tdh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="oGa-1x-SOu"/>
+                                    <constraint firstAttribute="width" constant="50" id="rRv-ev-3ES"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-qp-J7w">
+                                <rect key="frame" x="53.5" y="528" width="307" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-92-ZPg">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startButton:" destination="RKO-gR-F1R" eventType="touchUpInside" id="hvr-Fg-fWd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igN-Hj-FeL">
+                                        <rect key="frame" x="123" y="0.0" width="61" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="stopButton:" destination="RKO-gR-F1R" eventType="touchUpInside" id="A9B-MF-JI3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdA-cl-6b3">
+                                        <rect key="frame" x="246" y="0.0" width="61" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetButton:" destination="RKO-gR-F1R" eventType="touchUpInside" id="aIb-l8-bSr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="76k-Ql-GFj"/>
+                                    <constraint firstAttribute="width" constant="50" id="hPK-IU-KmQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TOM-zE-7NY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HV5-Hp-MQq" firstAttribute="centerY" secondItem="xJ5-Do-5hg" secondAttribute="centerY" id="cqz-cV-rgo"/>
+                            <constraint firstItem="Tvf-qp-J7w" firstAttribute="top" secondItem="HV5-Hp-MQq" secondAttribute="bottom" constant="50" id="hrd-PZ-U2q"/>
+                            <constraint firstItem="HV5-Hp-MQq" firstAttribute="centerX" secondItem="xJ5-Do-5hg" secondAttribute="centerX" id="xG7-NI-qRu"/>
+                            <constraint firstItem="Tvf-qp-J7w" firstAttribute="centerX" secondItem="xJ5-Do-5hg" secondAttribute="centerX" id="zvG-eG-HeH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="6e9-FO-9PQ"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="HV5-Hp-MQq" id="CL2-xJ-gaM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfX-W3-i7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,37 +134,6 @@
             </objects>
             <point key="canvasLocation" x="77" y="1447"/>
         </scene>
-        <!--Setting-->
-        <scene sceneID="fL4-lL-LJ8">
-            <objects>
-                <viewController storyboardIdentifier="Setting" id="01B-sp-9SN" customClass="SettingViewController" customModule="originalApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UwY-v1-PKv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ng2-sv-HcZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Setting" image="setting" id="RXL-D5-rNi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dab-4x-Jvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="922" y="806"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="79x-Vz-6Kp">
-            <objects>
-                <viewController storyboardIdentifier="Login" id="pwm-nf-aDq" customClass="LoginViewController" customModule="originalApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wab-OO-KBD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ncS-pR-k4k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPC-vz-J0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1639.1304347826087" y="82.366071428571431"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="avB-eZ-YtL">
             <objects>
@@ -99,7 +147,6 @@
                     <connections>
                         <segue destination="Gwh-Lm-Xic" kind="relationship" relationship="viewControllers" id="pe1-V5-nbQ"/>
                         <segue destination="RKO-gR-F1R" kind="relationship" relationship="viewControllers" id="yDo-nC-A4z"/>
-                        <segue destination="01B-sp-9SN" kind="relationship" relationship="viewControllers" id="rmh-nd-W8A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfV-JR-dhD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,7 +156,6 @@
     </scenes>
     <resources>
         <image name="home" width="25" height="25"/>
-        <image name="setting" width="25" height="25"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
@@ -35,8 +36,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             return true
         }
     }
-    
-
     /*
     // MARK: - Navigation
 
